@@ -222,6 +222,13 @@ ingress:
   #      - chart-example.local
   labels: {}
 
+## 
+# additionalTrustCerts: 
+#   secretName: my-trust-certs-secret-name
+#   certs:
+#   - rootcert.crt
+#   - subordcert.crt
+
 resources:
   requests:
     memory: 1Gi
