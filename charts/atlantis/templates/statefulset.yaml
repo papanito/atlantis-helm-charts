@@ -134,7 +134,7 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command: ["/bin/sh", "-c", "chown root:atlantis /etc/ssl/certs"]
+                command: ["/bin/sh", "-c", "chown root:atlantis /etc/ssl/certs && update-ca-certificates"]
           {{- if .Values.containerSecurityContext }}
           securityContext: {{- toYaml .Values.containerSecurityContext | nindent 12 }}
           {{- end }}
